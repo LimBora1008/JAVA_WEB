@@ -1,0 +1,71 @@
+.movie-info-section {
+	width:1200px;
+	margin: 0 auto;
+}
+
+.movie-info-section .banner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.movie-info-section .banner .left .movie-name {
+	font-size: 43px;
+    font-weight: 300;
+}
+
+.movie-info-section .banner .right {
+	display: flex;
+    flex-direction: column;
+}
+
+.movie-info-section .banner .right a{
+	background: dodgerblue;
+    height: 40px;
+    border: 1px solid gray;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+}
+.movie-info-section .banner .right a:hover {
+	opacity: .7;
+}
+.movie-info-section .content{margin-top:100px;}
+.movie-info-section .content .content-wrap {
+	display: flex;
+    margin: 0px;
+    list-style: none;
+    padding: 0px;
+    border: 1px solid black;
+    justify-content: space-around;
+}
+
+.movie-info-section .content .content-wrap .content-tab {
+	width: 100%;
+    text-align: center;
+    height: 100%;
+    padding: 20px 0px;
+    cursor:pointer;
+}
+
+.movie-info-section .content .movie-info-wrap {
+	margin-top: 30px;
+}
+
+.movie-info-section .content .movie-info-wrap .movie-intro{
+	padding: 20px 0px;
+    font-size: 19px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #80808036;
+}
+
+.movie-info-section .content .movie-info-wrap .movie-info {
+	margin-top: 20px;
+}
+
+
+

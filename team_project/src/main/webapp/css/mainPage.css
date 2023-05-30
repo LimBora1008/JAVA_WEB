@@ -1,0 +1,157 @@
+#content post {
+	padding: 20px;
+	background-color: #333;
+}
+
+.movie-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.movie {
+	width: calc(33.33% - 10px);
+	margin-bottom: 20px;
+}
+
+.movie img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 10px; /* 원하는 둥근 모서리 크기로 조정 */
+}
+
+.movie h3 {
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.movie p {
+	margin-top: 5px;
+	font-size: 14px;
+}
+
+/*예매하기 버튼*/
+.movie .booking-button {
+	display: block;
+	width: 150px;
+	padding: 5px 10px;
+	text-align: center;
+	background-color: #333;
+	color: #fff;
+	text-decoration: none;
+	margin-top: 10px;
+	border-radius: 5px; /* 원하는 둥근 모서리 크기로 조정 */
+}
+
+/* 로그인 툴 */
+#login-tools {
+	text-align: right;
+	padding-right:200px;
+}
+
+#login-tools a {
+	text-decoration: none;
+	color: black;
+	margin-left: 10px;
+	text-align: right;
+}
+
+#login-tools a:first-child {
+	margin-left: 0;
+}
+
+/* 화면 크기에 따른 스타일 조정 */
+@media ( max-width : 768px) {
+	.container {
+		padding: 10px;
+	}
+}
+
+@media ( max-width : 480px) {
+	.container {
+		padding: 5px;
+	}
+}
+
+.d-flex {
+	text-align: left;
+	padding-left: 150px;
+	height: 20pt;
+}
+
+.uptop {
+	text-align: right;
+	text-decoration-line: none;
+	color: black;
+	height: 50px;
+	width: 50px;
+}
+
+/*메뉴바*/
+.menu {
+	width: 100%;
+	text-align: center;
+	align-content: center;
+	overflow: hidden;
+	padding-left: 80px;
+	height: 20%;
+	text-decoration: none;
+}
+
+.menu>li {
+	width: 20%; /*20*5=100%*/
+	float: left;
+	text-align: center;
+	line-height: 40px;
+	background-color: #0a854b;
+	text-decoration: none;
+	padding: 10px;
+}
+
+.menu a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.submenu>li {
+	background-color: #23cd7d;
+    text-align: center;
+}
+
+.submenu {
+	text-decoration: none;
+}
+
+.menu>li:hover {
+	background-color: #23cd7d;
+	transition-duration: 0.5s;
+}
+
+.menu>li:hover .submenu {
+	height: 250px; /*서브메뉴 li한개의 높이 50*5*/
+	transition-duration: 1s;
+}
+
+.moving{
+	display: block;
+	width: 150px;
+	padding: 5px 10px;
+	text-align: center;
+	background-color: #0a854b;
+	color: #fff;
+	text-decoration: none;
+	margin-top: 10px;
+	margin-left: 650px;
+	border-radius: 5px; /* 원하는 둥근 모서리 크기로 조정 */
+}
+.slider{
+	
+}
