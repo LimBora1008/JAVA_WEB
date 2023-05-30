@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Text() vs HTML() 차이점</title>
+
+<!-- CDN(Content Delivery Network) jQuery 라이브러리 import -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js">
+	
+</script>
+
+<script>
+	/*
+	 ready() 함수
+	 : html의 모든 요소(element)가 렌더링 되고 난 후에
+	 실행되는 함수로 화면에 전체 요소가 렌더링되고 바로 직후에 실행된다.
+	 */
+	$(document).ready(function() {
+		// 렌더링 되고 화면에 보여지는 내용을 갖고 옴.
+		var textValue = $('#example').text();
+		// 결과 : 2021년 대한민국 신생아 수는 249,031 명이다.
+		console.log(textValue);
+
+		var htmlValue = $('#example').html();
+		// 결과(태그포함) : <p> 2021년 대한민국 신생아 수는 <b>249,031</b> 명이다. </p>
+		console.log(htmlValue);
+
+	})
+</script>
+</head>
+<body>
+
+	<div id="example">
+		<p>
+			2021년 대한민국 신생아 수는 <b>249,031</b> 명이다.
+		</p>
+	</div>
+
+</body>
+</html>

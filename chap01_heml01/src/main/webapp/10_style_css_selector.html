@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	
+	<!-- 셀렉터(선택자)
+		- HTML TAG에 붙여놓은 id속성 , class속성을 가진 요소를 특정해서
+		CSS를 적용하기 위해서 선택된 요소를 말한다. 
+	 -->
+	 
+	 
+	<!-- 내부(내장) CSS -->
+	<style>
+	/* 태그 셀렉터 */
+	p{
+		text-align: center;
+		color: red;
+	}
+	
+	/* id 셀렉터 */
+	#id{ /* 속성이 id일 경우 #을 붙인다 */
+		background-color : powderblue;
+		color : black;
+		padding : 10kx;
+		text-align : center;
+	}
+	
+	#id2{ /* 속성이 id일 경우 #을 붙인다 */
+		background-color : yellow;
+		color : black;
+		padding : 10kx;
+		text-align : center;
+	}
+		
+	/* class 셀렉터 */
+	.myHeader{ /* 속성이 class일 경우 .을 붙인다 */
+		background-color : lightblue;
+		color : black;
+		padding : 40kx;
+		text-align : center;	
+	}
+	</style>
+</head>
+<body>
+
+	<!-- 태그 : 중복가능 -->
+	<p> 태그 셀렉터 적용 </p>
+	<p> 태그 셀렉터 적용2 </p>
+
+	<!-- id 속성 : 속성 중복 불가 -->
+	<div id = "id">아이디 속성 적용</div>
+	<div id = "id2">아이디 속성 적용2</div>
+	<input id = "name" type = "text" value = "이름"/>
+	
+	<!-- class 속성 : 속성 중복가능 -->
+	<h1 class = "myHeader">My Header</h1>
+	<h1 class = "myHeader">My Header2</h1>
+	<h1 class = "myHeader">My Header3</h1>
+	
+</body>
+</html>

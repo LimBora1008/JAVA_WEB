@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- 자바스크립트 함수 정의 -->
+<script type="text/javascript">
+	/*
+	 	javascript Data Type(자료형)
+		- String
+		- Number
+		- Bigint
+		- Boolean
+		- Undefined : 자료형이 정해지진 않았지만 값을 할당받지않음
+		- Null : 객체가 값을 가지고있지않은상태
+		- Object(Object , Array)
+	 */
+	function getResult() {
+		
+		// Number :
+		let length = 16;
+		let weight = 7.5;
+		
+		// String :
+		let color = "Yellow";
+		let lastName = "Johnson";
+		
+		// Boolean :
+		let x = true;
+		let y = false;
+		
+		// Object :
+		const person = {firstName:"John",lastName:"Doe"};
+		console.log('person',person);
+		
+		// Array object:
+		const cars = ["saab","volvo","bmw"];
+		console.log('cars',cars);
+		
+		// Date object :
+		const date = new Date("2022-03-25");
+		console.log('date',date);
+		
+		let xx = 16+"volvo";
+		console.log('xx',xx);
+		
+		let xy = (16+1)+"volvo";
+		console.log('xy',xy);
+		
+	}
+</script>
+<title>자바스크립트 자료형</title>
+</head>
+<body>
+
+	<!-- HTML 요소에서 onclick 이벤트 함수 연결 -->
+	<input type="button" onclick="getResult()" value="let변수값 출력">
+
+	<!-- ID속성 -->
+	<div id="demo">결과가 표시될 자리</div>
+
+</body>
+</html>

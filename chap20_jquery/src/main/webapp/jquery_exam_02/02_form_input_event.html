@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery 다양한 선택자 예제</title>
+<!-- jquery 라이브러리 import -->
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+		// 1. submit버튼 클릭 이벤트 핸들러 , input[type=submit]
+		$("input[type='submit']").on('click', function() {
+			alert("submit button 클릭됨");
+		}); // end submit button
+
+		// 1.2 일반버튼 클릭 이벤트 핸들러
+		$("#btn").on('click', function() {
+			alert("일반 button 클릭됨");
+		}); // end 일반 button
+
+		// 2 체크박스 클릭 , id 속성으로 이벤트 핸들러 구성
+		// this : 자바스크립트에서 제공하는 this
+		// 자바스크립트의 this 사용시
+		$("#checkbox").change(function() {
+			if (this.checked) {
+				alert("Checkbox 체크됨");
+			} else {
+				alert("Checkbox 체크 해제됨");
+			}
+		}); // end 자바스크립트 this checkbox 
+
+		// 2.1 체크박스 클릭 이벤트 핸들러 , input[type=checkbox]
+		// $(this) : jquery문법을 통해서 접근하는 this
+ 		$("input[type='checkbox']").on('change', function() {
+			if ($(this).is(":checked")) {
+				alert("Checkbox 체크됨");
+			} else {
+				alert("Checkbox 체크 해제됨");
+			}
+		}); // end 제이쿼리 this checkbox
+		
+		// [셀렉트박스 , 콤보박스 , 드롭다운리스트]
+		// 콤보박스에서 중요한 것은 value 값임
+		$("select").change(function() {
+			// 1. 방법(value 추출)
+			let thisVal = $(this).val();
+			alert("Select value changed to($(this).val()) : " + thisVal);
+
+			// 2. 방법(value 추출)
+			let selectedVal = $("#favorites option:selected").val();
+			alert("선택된 값(value) : " + selectedVal);
+
+			// 3. 방법(text 추출)
+			let selectedText = $("#favorites option:selected").text();
+			alert("선택된 값(text) : " + selectedText);
+		}); // end select
+
+		// input[type=radio] 레디오 버튼 클릭시 발생하는 이벤트
+		$("input[type='radio']").change(function() {
+			alert("Radio button selected : " + $(this).val());
+		}); // end input[type=radio]
+
+		// input[type=text] 키보드의 키가 눌렸을 경우 발생하는 이벤트
+		$("input[type='text']").keyup(function() {
+			alert("Text input value changed to : " + $(this).val());
+		}); // end input[type=text]
+
+	}); // end ready
+</script>
+
+</head>
+<body>
+	<h2>
+		[jQuery 다양한 선택자 예제] <br> Html form input Element 개별 이벤트 체크
+	</h2>
+	<br>
+
+	<input type="submit" value="Submit">
+	<button type="button" id="btn">일반버튼</button>
+
+	<br>
+	<br>
+
+	<input type="checkbox" id="checkbox">
+	<label for="checkbox">Check me</label>
+
+	<br>
+	<br>
+
+	<select id="favorites">
+		<option value="1">벤츠(Benz)</option>
+		<option value="2">Genesis</option>
+		<option value="3">BMW</option>
+	</select>
+
+	<br>
+	<br>
+
+	<input type="radio" name="radio" value="1" id="radio1">
+	<label for="radio1">Radio Button 1</label>
+	<br>
+	
+	<input type="radio" name="radio" value="2" id="radio2">
+	<label for="radio2">Radio Button 2</label>
+	<br>
+	<br>
+	
+	<input type="text" placeholder="Type something here">
+	
+</body>
+</html>

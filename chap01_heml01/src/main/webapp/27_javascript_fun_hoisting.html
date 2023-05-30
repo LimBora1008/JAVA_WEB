@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- 자바스크립트 함수 정의 -->
+<script type="text/javascript">
+	/*
+	 함수 호이스팅
+	 */
+	 
+	// getResult 함수 선언문
+	function getResult() {
+		let sum = add(2, 5);
+		console.log('sum', sum);
+		console.log('sum : ' + sum);
+	}
+	
+	// add 함수 선언문
+/*	
+	function add(x,y) {
+		return x+y
+	}
+*/
+
+	// add 함수 표현식
+
+		var add = function (x,y) {
+			return x+y;
+		}
+
+	
+</script>
+<title>자바스크립트 함수</title>
+</head>
+<body>
+
+	<!-- HTML 요소에서 onclick 이벤트 함수 연결 -->
+	<input type="button" onclick="getResult()" value="let변수값 출력">
+
+	<!-- ID속성 -->
+	<div id="demo">결과가 표시될 자리</div>
+
+</body>
+</html>

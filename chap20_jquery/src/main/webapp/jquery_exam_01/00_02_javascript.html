@@ -1,0 +1,39 @@
+<!-- html5를 준수한다 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>순수 자바스크립트</title>
+
+<style>
+/* CSS 내용 */
+</style>
+
+<!-- 자바스크립트 실행 후에 다른요소들을 생성 > body에 있는 요소에 적용x  > 이 문제를 j쿼리가 해결해줌 -->
+<script type="text/javascript">
+	// id가 "abc"인 요소의 참조 주소 얻기
+	let paragraph = document.getElementById("abc");
+	// id가 "abc"인 요소에 스타일 적용
+	paragraph.style.color = "blue";
+
+	// input 값을 가져와서 얼럿 띄워줌
+	let language = document.getElementById("lang").value;
+	alert(language);
+</script>
+
+</head>
+<body>
+	<p id="abc">1. 나는 파랑색 color가 적용되어 있다.</p>
+	<!-- id속성 : 유일하게 구분하기 위해 사용 / p : 한 문단으로 묶는다 -->
+	<input type="text" id="lang" name="lang" value="한글" />
+	<!-- <input type="text" id="lang" name="lang" value="한글" /> id는 동일한 이름으로 사용불가 -->
+
+<!-- 	
+	<input type="text" class="name" name="name" />  class : 클래스 네임은 동일하게 선언가능
+	<input type="text" class="name" name="name" /> 
+	<input type="text" class="name" name="name" />  
+-->
+
+</body>
+</html>

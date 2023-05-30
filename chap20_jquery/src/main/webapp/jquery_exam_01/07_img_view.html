@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Class 셀렉터</title>
+<!-- jquery 라이브러리 import -->
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+	// 일반 함수 선언
+/* 	
+	function addImage() {
+		// 클래스명이 divimg1인 엘리먼트의 태그(<>...</>사이) 부분에 이미지 표시 
+		$(".divimg1").html("<img src='../images/ai.png'>");
+	}
+ */
+ 
+	$(document).ready(function() {
+/* 		
+		// jQuery 함수로 이벤트 핸들러 생성
+		$("input[type='button']").on('click', function() {
+			// 'divimg1'에 아래 주소의 이미지 표시
+			$(".divimg1").html("<img src='../images/ai.png'>");
+		});
+ */
+		$('#btnImg').on('click', function() {
+			$(".divimg1").html("<img src='../images/ai.png'>");
+		});
+	});
+</script>
+
+</head>
+<body>
+	<div class="divimg1"></div>
+	<div class="divimg1"></div>
+
+	<input type="button" id="btnImg" value="이미지 추가하기" />
+</body>
+</html>
